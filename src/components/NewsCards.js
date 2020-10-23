@@ -4,7 +4,9 @@ import NewsCard from './NewsCard/NewsCard';
 const NewsCards = ({ data }) => {
   return (
     <>
-      <Container>
+      <Container className="mt-5">
+          {data.length>0&&
+          <>
         <Carousel className="my-3">
             {
                 data&&data.map((val,i)=>(
@@ -15,8 +17,9 @@ const NewsCards = ({ data }) => {
               alt='First slide'
             />
             <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                <a href={val.url} style={{color:'white',textDecoration:'none'}}><h3>{val.title}</h3></a>
+              
+              
             </Carousel.Caption>
           </Carousel.Item>
                 ))
@@ -24,9 +27,12 @@ const NewsCards = ({ data }) => {
         
           
         </Carousel>
+          
         <CardColumns>
           {data && data.map((val, i) => <NewsCard newsData={val} />)}
         </CardColumns>
+        </>
+    }
       </Container>
     </>
   );
