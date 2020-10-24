@@ -7,7 +7,7 @@ const Header = () => {
       <Navbar bg='black' variant='dark' expand='lg' collapseOnSelect style={{boxShadow: '-2px 17px 20px -13px rgba(79,74,230,1)'}} >
         <Container fluid>
           
-            <Navbar.Brand style={{color:'rgba(79,74,230,1)'}}><strong>NewsAI</strong></Navbar.Brand>
+            <Navbar.Brand style={{color:'rgba(79,74,230,1)'}}><strong>NewsAI <i class="fas fa-volume-down"></i></strong></Navbar.Brand>
           
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           {/* <Navbar.Collapse id='basic-navbar-nav'>
